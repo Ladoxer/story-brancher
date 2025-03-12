@@ -1,0 +1,29 @@
+[
+  {
+    "id": "cosmic-odyssey",
+    "title": "Cosmic Odyssey",
+    "author": "Alex Writer",
+    "coverImage": "assets/images/cosmic-cover.jpg",
+    "description": "An interstellar journey through forgotten galaxies where choices determine humanity's fate.",
+    "genre": "sci-fi",
+    "nodeCount": 10
+  },
+  {
+    "id": "haunted-manor",
+    "title": "The Haunted Manor",
+    "author": "Erica Ghost",
+    "coverImage": "assets/images/haunted-manor.jpg",
+    "description": "Explore a mysterious manor with a dark history where your decisions may lead to discovery or doom.",
+    "genre": "horror",
+    "nodeCount": 12
+  },
+  {
+    "id": "dragon-quest",
+    "title": "Dragon's Quest",
+    "author": "Morgan Fantasy",
+    "coverImage": "assets/images/dragon-quest.jpg",
+    "description": "Embark on an epic adventure in a world of magic where you must save the kingdom from an ancient dragon.",
+    "genre": "fantasy",
+    "nodeCount": 15
+  }
+]

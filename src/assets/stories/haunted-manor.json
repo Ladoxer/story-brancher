@@ -1,0 +1,192 @@
+{
+  "id": "haunted-manor",
+  "title": "The Haunted Manor",
+  "author": "Erica Ghost",
+  "coverImage": "assets/images/haunted-manor.jpg",
+  "description": "Explore a mysterious manor with a dark history where your decisions may lead to discovery or doom.",
+  "genre": "horror",
+  "startNodeId": "manor-entrance",
+  "created": "2023-03-15T00:00:00.000Z",
+  "modified": "2023-03-20T00:00:00.000Z",
+  "nodes": {
+    "manor-entrance": {
+      "id": "manor-entrance",
+      "content": "Rain lashes down as you stand before Blackwood Manor, an imposing Victorian structure that's been abandoned for decades. Lightning illuminates its decrepit facade, revealing broken windows and creeping ivy. You've come to investigate the disappearance of your friend, who was researching the manor's dark history. The massive front door is slightly ajar, as if inviting you in.",
+      "choices": [
+        { "text": "Enter through the front door", "nextNodeId": "grand-foyer" },
+        { "text": "Look for another entrance", "nextNodeId": "side-entrance" },
+        { "text": "Call out for your friend", "nextNodeId": "call-out" }
+      ],
+      "metadata": {
+        "mood": "tense",
+        "image": "assets/images/manor-exterior.jpg"
+      }
+    },
+    "grand-foyer": {
+      "id": "grand-foyer",
+      "content": "You push the creaking door open and step into the grand foyer. Moonlight filters through a shattered skylight, illuminating a once-opulent entry hall now covered in dust and cobwebs. A massive staircase leads to the upper floor, while doorways lead to the east and west wings. On a side table, you notice a leather-bound journal that looks recently disturbed.",
+      "choices": [
+        { "text": "Examine the journal", "nextNodeId": "journal" },
+        { "text": "Explore the east wing", "nextNodeId": "east-wing" },
+        { "text": "Explore the west wing", "nextNodeId": "west-wing" },
+        { "text": "Climb the staircase", "nextNodeId": "upstairs" }
+      ],
+      "metadata": {
+        "mood": "mysterious",
+        "image": "assets/images/grand-foyer.jpg"
+      }
+    },
+    "side-entrance": {
+      "id": "side-entrance",
+      "content": "You circle around the manor, rain soaking through your clothes. At the back, you find a servant's entrance leading to what must be the kitchen. The door is locked, but a nearby window is broken. As you peer inside, you catch a brief glimpse of a figure moving in the darkness.",
+      "choices": [
+        { "text": "Break the window further and climb in", "nextNodeId": "kitchen" },
+        { "text": "Return to the front entrance", "nextNodeId": "manor-entrance" },
+        { "text": "Investigate the garden shed nearby", "nextNodeId": "garden-shed" }
+      ],
+      "metadata": {
+        "mood": "tense"
+      }
+    },
+    "call-out": {
+      "id": "call-out",
+      "content": "\"Hello? Alex? Are you in there?\" you call out. Your voice echoes through the empty halls, and for a moment there's only the sound of rain. Then, faintly, you hear what sounds like a response – a whisper that might be your name, coming from somewhere inside the manor.",
+      "choices": [
+        { "text": "Enter through the front door", "nextNodeId": "grand-foyer" },
+        { "text": "Call out again", "nextNodeId": "call-again" },
+        { "text": "Listen carefully for the source", "nextNodeId": "listen-carefully" }
+      ],
+      "metadata": {
+        "mood": "tense"
+      }
+    },
+    "journal": {
+      "id": "journal",
+      "content": "You pick up the journal, recognizing it as Alex's research diary. The last entry is dated three days ago: \"I've found references to the sealed room in the east wing. The manor's original owner, Judge Blackwood, apparently used it for 'special hearings' – trials that never made it to official courts. Tomorrow I'll try to find it. Something terrible happened there, I'm sure of it.\"",
+      "choices": [
+        { "text": "Head to the east wing to find the sealed room", "nextNodeId": "east-wing" },
+        { "text": "Continue exploring the foyer", "nextNodeId": "foyer-detailed" },
+        { "text": "Check upstairs for Alex", "nextNodeId": "upstairs" }
+      ],
+      "metadata": {
+        "mood": "mysterious",
+        "image": "assets/images/journal.jpg"
+      }
+    },
+    "east-wing": {
+      "id": "east-wing",
+      "content": "The east wing houses what was once a grand library. Bookshelves stretch from floor to ceiling, many books now ruined by dampness and neglect. A marble fireplace dominates one wall, and above it hangs a portrait of a stern-faced man in judge's robes – presumably Judge Blackwood. His eyes seem to follow you as you move through the room.",
+      "choices": [
+        { "text": "Search for information about the sealed room", "nextNodeId": "search-library" },
+        { "text": "Examine the portrait", "nextNodeId": "portrait" },
+        { "text": "Investigate the fireplace", "nextNodeId": "fireplace" },
+        { "text": "Return to the foyer", "nextNodeId": "grand-foyer" }
+      ],
+      "metadata": {
+        "mood": "mysterious",
+        "image": "assets/images/manor-library.jpg"
+      }
+    },
+    "west-wing": {
+      "id": "west-wing",
+      "content": "The west wing contains what appears to be a dining room and lounge area. A long table with ornate chairs suggests lavish dinner parties once took place here. Crystal glasses still sit on the table, thick with dust. Through a doorway, you can see what looks like a conservatory filled with dead plants.",
+      "choices": [
+        { "text": "Investigate the dining room", "nextNodeId": "dining-room" },
+        { "text": "Enter the conservatory", "nextNodeId": "conservatory" },
+        { "text": "Return to the foyer", "nextNodeId": "grand-foyer" }
+      ],
+      "metadata": {
+        "mood": "mysterious"
+      }
+    },
+    "upstairs": {
+      "id": "upstairs",
+      "content": "You ascend the creaking staircase, each step threatening to give way beneath you. The upper landing branches into a corridor with several doors. One door stands ajar, with what looks like fresh scratches on the wood. Another door is more ornate than the others, likely the master bedroom. At the end of the hall, a narrow staircase leads to what must be the attic.",
+      "choices": [
+        { "text": "Check the scratched door", "nextNodeId": "scratched-door" },
+        { "text": "Enter the master bedroom", "nextNodeId": "master-bedroom" },
+        { "text": "Climb to the attic", "nextNodeId": "attic-stairs" },
+        { "text": "Return to the foyer", "nextNodeId": "grand-foyer" }
+      ],
+      "metadata": {
+        "mood": "tense",
+        "image": "assets/images/manor-upstairs.jpg"
+      }
+    },
+    "kitchen": {
+      "id": "kitchen",
+      "content": "You carefully climb through the broken window into the kitchen. Ancient appliances and countertops are covered in years of grime. Moonlight reveals a large knife block, with one knife conspicuously missing. As your eyes adjust, you notice a faint red trail on the floor – fresh blood, leading toward a door that must connect to the main house.",
+      "choices": [
+        { "text": "Follow the blood trail", "nextNodeId": "blood-trail" },
+        { "text": "Look for useful items in the kitchen", "nextNodeId": "search-kitchen" },
+        { "text": "Go through the door to the main house", "nextNodeId": "grand-foyer" }
+      ],
+      "metadata": {
+        "mood": "tense",
+        "image": "assets/images/manor-kitchen.jpg"
+      }
+    },
+    "garden-shed": {
+      "id": "garden-shed",
+      "content": "The garden shed is a small wooden structure, surprisingly well-maintained compared to the manor. Inside, you find gardening tools arranged neatly on the walls. A workbench holds a recent-looking lantern and a ring of keys. A notebook sits open, showing meticulous garden plans with one odd note in different handwriting: \"Don't go in after dark. They're awake then.\"",
+      "choices": [
+        { "text": "Take the lantern and keys", "nextNodeId": "take-items" },
+        { "text": "Return to the manor's side entrance", "nextNodeId": "side-entrance" },
+        { "text": "Read more of the notebook", "nextNodeId": "gardener-notes" }
+      ],
+      "metadata": {
+        "mood": "mysterious"
+      }
+    },
+    "call-again": {
+      "id": "call-again",
+      "content": "You call out again, louder this time. \"Alex! Where are you?\" The whispers intensify, seeming to come from multiple directions at once. It's no longer just your name – there are many voices speaking, some pleading, others warning. A cold wind blows from inside the manor, carrying the scent of decay.",
+      "choices": [
+        { "text": "Enter the manor cautiously", "nextNodeId": "grand-foyer" },
+        { "text": "Run away from the manor", "nextNodeId": "run-away" },
+        { "text": "Call someone for backup", "nextNodeId": "call-backup" }
+      ],
+      "metadata": {
+        "mood": "tense"
+      }
+    },
+    "listen-carefully": {
+      "id": "listen-carefully",
+      "content": "You strain your ears, trying to locate the source of the whisper. It's difficult over the rain, but you determine it's coming from an upper window. Looking up, you see a pale face briefly appear at a second-floor window before vanishing into darkness. It looked like Alex, but something wasn't quite right about their expression.",
+      "choices": [
+        { "text": "Rush inside to reach the upper floor", "nextNodeId": "grand-foyer" },
+        { "text": "Call out again with more urgency", "nextNodeId": "call-again" },
+        { "text": "Try to find a way to climb up to the window", "nextNodeId": "climb-attempt" }
+      ],
+      "metadata": {
+        "mood": "tense",
+        "image": "assets/images/manor-window.jpg"
+      }
+    },
+    "foyer-detailed": {
+      "id": "foyer-detailed",
+      "content": "You search the foyer more carefully. Behind a fallen coat rack, you discover a framed newspaper article from 1897 with the headline \"Judge Blackwood Found Dead in Sealed Chamber.\" The article describes how the judge was discovered in a room that had been locked from the inside, with no obvious cause of death. His last case involved accusations of witchcraft against three local women.",
+      "choices": [
+        { "text": "Head to the east wing to find the sealed room", "nextNodeId": "east-wing" },
+        { "text": "Explore the west wing", "nextNodeId": "west-wing" },
+        { "text": "Climb the staircase", "nextNodeId": "upstairs" }
+      ],
+      "metadata": {
+        "mood": "mysterious"
+      }
+    },
+    "search-library": {
+      "id": "search-library",
+      "content": "You scan the bookshelves, pulling out promising volumes. After some searching, you find a thin book titled \"Blackwood Manor: Architectural Modifications 1850-1900.\" Inside are blueprints showing a hidden room behind the library's fireplace, added in 1892 – around the time Judge Blackwood was presiding over the witchcraft trials.",
+      "choices": [
+        { "text": "Investigate the fireplace", "nextNodeId": "fireplace" },
+        { "text": "Look for more information about the trials", "nextNodeId": "trial-records" },
+        { "text": "Return to the foyer", "nextNodeId": "grand-foyer" }
+      ],
+      "metadata": {
+        "mood": "mysterious",
+        "image": "assets/images/manor-blueprints.jpg"
+      }
+    }
+  }
+}

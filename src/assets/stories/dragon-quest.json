@@ -1,0 +1,164 @@
+{
+  "id": "dragon-quest",
+  "title": "Dragon's Quest",
+  "author": "Morgan Fantasy",
+  "coverImage": "assets/images/dragon-quest.jpg",
+  "description": "Embark on an epic adventure in a world of magic where you must save the kingdom from an ancient dragon.",
+  "genre": "fantasy",
+  "startNodeId": "village",
+  "created": "2023-02-10T00:00:00.000Z",
+  "modified": "2023-02-15T00:00:00.000Z",
+  "nodes": {
+    "village": {
+      "id": "village",
+      "content": "You are a young adventurer in the peaceful village of Oakvale. The morning bells ring out in alarm as smoke rises from the nearby hills. The elder gathers everyone in the town square and announces that the ancient dragon Moriath has awakened after centuries of slumber. The kingdom needs a hero.",
+      "choices": [
+        { "text": "Volunteer to face the dragon", "nextNodeId": "volunteer" },
+        { "text": "Suggest seeking help from the wizards' council", "nextNodeId": "wizards-council" },
+        { "text": "Propose evacuating the village first", "nextNodeId": "evacuation" }
+      ],
+      "metadata": {
+        "mood": "tense",
+        "image": "assets/images/village-square.jpg"
+      }
+    },
+    "volunteer": {
+      "id": "volunteer",
+      "content": "You step forward amidst gasps from the villagers. 'I will face Moriath,' you announce. The elder looks at you with a mixture of relief and concern. 'Brave one, you cannot face such a beast unprepared. You must seek the elements of the Dragon Bane, an ancient weapon that can defeat Moriath.'",
+      "choices": [
+        { "text": "Ask about the Dragon Bane elements", "nextNodeId": "dragon-bane-info" },
+        { "text": "Request warriors to join you", "nextNodeId": "request-warriors" }
+      ],
+      "metadata": {
+        "mood": "neutral"
+      }
+    },
+    "wizards-council": {
+      "id": "wizards-council",
+      "content": "'We should consult the wizards' council in the Crystal Tower,' you suggest. The elder nods gravely. 'The journey to the Crystal Tower is perilous, but you speak wisely. The wizards may know Moriath's weakness.'",
+      "choices": [
+        { "text": "Travel to the Crystal Tower alone", "nextNodeId": "crystal-tower-journey" },
+        { "text": "Gather a small group before departing", "nextNodeId": "gather-group" }
+      ],
+      "metadata": {
+        "mood": "neutral"
+      }
+    },
+    "evacuation": {
+      "id": "evacuation",
+      "content": "'We should evacuate the village immediately,' you suggest. 'The dragon could attack at any moment.' The elder considers your words. 'To where would we flee? Moriath's reach is vast, and we have many who cannot travel quickly.'",
+      "choices": [
+        { "text": "Suggest the underground caves for shelter", "nextNodeId": "underground-caves" },
+        { "text": "Propose sending riders to request royal protection", "nextNodeId": "royal-protection" }
+      ],
+      "metadata": {
+        "mood": "tense"
+      }
+    },
+    "dragon-bane-info": {
+      "id": "dragon-bane-info",
+      "content": "The elder explains: 'The Dragon Bane was forged from three sacred elements - a scale from the last dragon slain a millennium ago, kept in the Mountain Shrine; enchanted steel from the Dwarven Forge in the Firemount caverns; and the blessing of the Great Spirit in the Ancient Grove. Only with all three can you forge a weapon to defeat Moriath.'",
+      "choices": [
+        { "text": "Journey to the Mountain Shrine first", "nextNodeId": "mountain-shrine" },
+        { "text": "Seek the Dwarven Forge first", "nextNodeId": "dwarven-forge" },
+        { "text": "Visit the Ancient Grove first", "nextNodeId": "ancient-grove" }
+      ],
+      "metadata": {
+        "mood": "mysterious",
+        "image": "assets/images/ancient-map.jpg"
+      }
+    },
+    "request-warriors": {
+      "id": "request-warriors",
+      "content": "'I'll need brave warriors to join me,' you declare. The village falls silent until a tall woman with a scarred face steps forward. 'I am Lyra, once captain of the royal guard. My sword is yours.' An archer and an old man who identifies himself as a retired battle mage also volunteer.",
+      "choices": [
+        { "text": "Accept their help and plan your quest for the Dragon Bane", "nextNodeId": "plan-quest" },
+        { "text": "Ask why Lyra left the royal guard", "nextNodeId": "lyra-backstory" }
+      ],
+      "metadata": {
+        "mood": "neutral"
+      }
+    },
+    "crystal-tower-journey": {
+      "id": "crystal-tower-journey",
+      "content": "You set out alone for the Crystal Tower. The path takes you through the Whispering Forest, where eerie voices seem to call your name. As night falls, you make camp, only to be surrounded by glowing eyes in the darkness. Forest spirits materialize around you, curious and somewhat hostile.",
+      "choices": [
+        { "text": "Offer them food as a gesture of peace", "nextNodeId": "forest-spirits-peace" },
+        { "text": "Brandish your weapon and stand your ground", "nextNodeId": "forest-spirits-threat" }
+      ],
+      "metadata": {
+        "mood": "mysterious",
+        "image": "assets/images/whispering-forest.jpg"
+      }
+    },
+    "gather-group": {
+      "id": "gather-group",
+      "content": "You spend the day gathering volunteers for the journey. By sundown, you have three companions: Tomas, a skilled hunter; Eira, a healer with knowledge of herb lore; and Kell, a former soldier seeking redemption. As you prepare to leave the next morning, a young apprentice from the elder's house brings you a sealed scroll.",
+      "choices": [
+        { "text": "Open the scroll", "nextNodeId": "scroll-message" },
+        { "text": "Begin your journey immediately", "nextNodeId": "journey-begins" }
+      ],
+      "metadata": {
+        "mood": "neutral"
+      }
+    },
+    "underground-caves": {
+      "id": "underground-caves",
+      "content": "'The network of caves beneath the eastern hills could shelter everyone,' you explain. 'They're extensive and have fresh water.' The elder's eyes light up. 'Yes, I had forgotten! But those caves are said to be home to the kobolds. We would need to ensure they're safe.'",
+      "choices": [
+        { "text": "Lead a scouting party to check the caves", "nextNodeId": "scout-caves" },
+        { "text": "Begin evacuation and deal with any threats as they come", "nextNodeId": "immediate-evacuation" }
+      ],
+      "metadata": {
+        "mood": "tense"
+      }
+    },
+    "royal-protection": {
+      "id": "royal-protection",
+      "content": "'We should send riders to the capital, request protection from the royal army,' you suggest. The elder shakes his head. 'The capital is five days' ride, and the Queen's forces are engaged in the northern conflict. We must rely on ourselves for now.'",
+      "choices": [
+        { "text": "Suggest the underground caves instead", "nextNodeId": "underground-caves" },
+        { "text": "Propose preparing defenses in the village", "nextNodeId": "village-defense" }
+      ],
+      "metadata": {
+        "mood": "tense"
+      }
+    },
+    "mountain-shrine": {
+      "id": "mountain-shrine",
+      "content": "After days of climbing treacherous mountain paths, you reach the ancient shrine. The stone building is perched on a cliff edge, with dragon motifs carved into its weathered walls. Inside, you find the altar empty – the scale is gone. A lone monk meditates nearby.",
+      "choices": [
+        { "text": "Ask the monk about the missing scale", "nextNodeId": "monk-conversation" },
+        { "text": "Search the shrine for clues", "nextNodeId": "shrine-search" }
+      ],
+      "metadata": {
+        "mood": "mysterious",
+        "image": "assets/images/mountain-shrine.jpg"
+      }
+    },
+    "dwarven-forge": {
+      "id": "dwarven-forge",
+      "content": "The Firemount caverns rumble with activity as you approach. Dwarven guards stop you at the entrance. 'Halt! The forge is closed to outsiders. The master smiths are working day and night on weapons for our own defense against the dragon.'",
+      "choices": [
+        { "text": "Explain your quest for the Dragon Bane", "nextNodeId": "explain-quest" },
+        { "text": "Offer to help the dwarves with their defenses in exchange for access", "nextNodeId": "help-dwarves" }
+      ],
+      "metadata": {
+        "mood": "tense",
+        "image": "assets/images/dwarven-forge.jpg"
+      }
+    },
+    "ancient-grove": {
+      "id": "ancient-grove",
+      "content": "The Ancient Grove is a cathedral of towering trees, their canopies filtering sunlight into emerald beams. At the center stands a massive oak tree, pulsing with soft light. As you approach, the forest falls silent, and you feel countless eyes watching you.",
+      "choices": [
+        { "text": "Respectfully address the Great Spirit", "nextNodeId": "address-spirit" },
+        { "text": "Present an offering to the grove", "nextNodeId": "grove-offering" }
+      ],
+      "metadata": {
+        "mood": "mysterious",
+        "image": "assets/images/ancient-grove.jpg"
+      }
+    }
+  }
+}

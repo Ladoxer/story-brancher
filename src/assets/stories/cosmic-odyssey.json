@@ -1,0 +1,128 @@
+{
+  "id": "cosmic-odyssey",
+  "title": "Cosmic Odyssey",
+  "author": "Alex Writer",
+  "coverImage": "assets/images/cosmic-cover.jpg",
+  "description": "An interstellar journey through forgotten galaxies where choices determine humanity's fate.",
+  "genre": "sci-fi",
+  "startNodeId": "start",
+  "created": "2023-01-15T00:00:00.000Z",
+  "modified": "2023-01-20T00:00:00.000Z",
+  "nodes": {
+    "start": {
+      "id": "start",
+      "content": "You awake from cryo-sleep, alerts blaring throughout the ship. The navigation system shows you're off course, drifting toward an uncharted star system. The AI assistant is offline, and you're the only crew member awake.",
+      "choices": [
+        { "text": "Try to fix the navigation system", "nextNodeId": "nav-fix" },
+        { "text": "Wake up another crew member", "nextNodeId": "wake-crew" },
+        { "text": "Investigate the unknown signal coming from nearby", "nextNodeId": "investigate-signal" }
+      ],
+      "metadata": {
+        "mood": "tense",
+        "image": "assets/images/spaceship-cockpit.jpg"
+      }
+    },
+    "nav-fix": {
+      "id": "nav-fix",
+      "content": "You access the navigation terminal. Diagnostics reveal multiple system failures caused by an energy surge from an external source. The ship's thrusters are functioning, but the guidance system is corrupted. You could attempt a manual override or run the emergency recovery protocol.",
+      "choices": [
+        { "text": "Attempt manual override", "nextNodeId": "manual-override" },
+        { "text": "Run emergency recovery protocol", "nextNodeId": "recovery-protocol" }
+      ],
+      "metadata": {
+        "mood": "tense"
+      }
+    },
+    "wake-crew": {
+      "id": "wake-crew",
+      "content": "You decide to wake up the engineering specialist, Dr. Chen. The cryo-pod hisses as it opens, and Dr. Chen groggily steps out. 'What's happening? We're not scheduled for arrival for another 6 months,' she says, noticing the alarms.",
+      "choices": [
+        { "text": "Explain the navigation issue", "nextNodeId": "explain-to-chen" },
+        { "text": "Ask her to check the ship's power core", "nextNodeId": "check-power-core" }
+      ],
+      "metadata": {
+        "mood": "mysterious"
+      }
+    },
+    "investigate-signal": {
+      "id": "investigate-signal",
+      "content": "You tune into the strange signal. At first, it seems like random noise, but patterns emerge—it's a repeating mathematical sequence. As you analyze it further, you realize it's a distress call, but unlike any human protocol you've encountered.",
+      "choices": [
+        { "text": "Respond to the signal", "nextNodeId": "respond-signal" },
+        { "text": "Ignore it and focus on fixing the ship", "nextNodeId": "nav-fix" },
+        { "text": "Track the signal's source", "nextNodeId": "track-signal" }
+      ],
+      "metadata": {
+        "mood": "mysterious",
+        "image": "assets/images/strange-signal.jpg"
+      }
+    },
+    "manual-override": {
+      "id": "manual-override",
+      "content": "You initiate manual control of the ship. The interface feels sluggish but responsive. With careful adjustments, you manage to stabilize your trajectory away from the unknown star system. However, without a proper navigation system, you can't set a course back to your original destination.",
+      "choices": [
+        { "text": "Set course for the nearest charted system", "nextNodeId": "nearest-system" },
+        { "text": "Maintain current position and work on repairs", "nextNodeId": "maintain-position" }
+      ],
+      "metadata": {
+        "mood": "tense"
+      }
+    },
+    "recovery-protocol": {
+      "id": "recovery-protocol",
+      "content": "The emergency recovery protocol begins. Systems reboot one by one, with progress bars crawling across your screen. Suddenly, a message appears: 'WARNING: Unknown data corruption detected. Recovery at risk.'",
+      "choices": [
+        { "text": "Continue the recovery protocol", "nextNodeId": "continue-recovery" },
+        { "text": "Abort and switch to manual override", "nextNodeId": "manual-override" }
+      ],
+      "metadata": {
+        "mood": "tense"
+      }
+    },
+    "explain-to-chen": {
+      "id": "explain-to-chen",
+      "content": "You explain the navigation issues to Dr. Chen. She listens intently, occasionally nodding. 'This sounds like external interference,' she says. 'We should check the external sensors and see what's out there before making any other decisions.'",
+      "choices": [
+        { "text": "Check external sensors with Dr. Chen", "nextNodeId": "check-sensors" },
+        { "text": "Suggest focusing on navigation repair instead", "nextNodeId": "chen-navigation-repair" }
+      ],
+      "metadata": {
+        "mood": "neutral"
+      }
+    },
+    "check-power-core": {
+      "id": "check-power-core",
+      "content": "Dr. Chen checks the power core diagnostics. 'This is strange,' she says, brow furrowed. 'The core is operating at 150% capacity, but there's no overload. Something's drawing power, or...' She pauses. 'Or something's feeding power into our systems.'",
+      "choices": [
+        { "text": "Ask what could be feeding power to the ship", "nextNodeId": "question-power-source" },
+        { "text": "Suggest shutting down the power core", "nextNodeId": "shutdown-core" }
+      ],
+      "metadata": {
+        "mood": "mysterious"
+      }
+    },
+    "respond-signal": {
+      "id": "respond-signal",
+      "content": "You send a response using the same mathematical pattern, a universal language of sorts. Minutes pass in tense silence. Then, your screen lights up with a new message—a series of coordinates and what appears to be a schematic of your ship with a highlighted area in the cargo bay.",
+      "choices": [
+        { "text": "Go to the cargo bay", "nextNodeId": "cargo-bay" },
+        { "text": "Share the information with Dr. Chen", "nextNodeId": "share-with-chen" }
+      ],
+      "metadata": {
+        "mood": "mysterious"
+      }
+    },
+    "track-signal": {
+      "id": "track-signal",
+      "content": "Using the ship's sensors, you triangulate the source of the signal. It's coming from a small moon orbiting a gas giant in the nearby system. The moon's surface appears metallic, unlike any natural formation you've seen in your astrological database.",
+      "choices": [
+        { "text": "Set course for the moon", "nextNodeId": "course-to-moon" },
+        { "text": "Wake the science officer for consultation", "nextNodeId": "wake-science-officer" }
+      ],
+      "metadata": {
+        "mood": "mysterious",
+        "image": "assets/images/strange-moon.jpg"
+      }
+    }
+  }
+}
